@@ -1,0 +1,64 @@
+{% extends 'master.html' %}
+{% include 'header.html' %}
+
+{% block title %} Add Student {% endblock %}
+
+{% block body %}
+ <div class="container">
+	<form action="/create" method="post">
+		<table>
+			<tr>
+				<td>First name</td>
+				<td><input type="text" name="first_name" class="form-control"></td>
+			</tr>
+
+			<tr>
+				<td>Last name</td>
+				<td><input type="text" name="last_name" class="form-control"></td>
+			</tr>
+			<tr>
+				<td>email</td>
+				<td><input type="text" name="email" class="form-control"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password" class="form-control"></td>
+			</tr>
+			<tr>
+				<td>gender</td>
+				<td>
+					Male: <input type="radio" name="gender" value="male">
+					Female: <input type="radio" name="gender" value="female">
+				</td>
+			</tr>
+		</tr>
+		<tr>
+			<td>hobbies</td>
+			<td>
+				Cricket: <input type="checkbox" name="hobbies" value="cricket">
+				Movies: <input type="checkbox" name="hobbies" value="movies">
+				Tv: <input type="checkbox" name="hobbies" value="tv">
+			</td>
+		</tr>
+		<tr>
+			<td>country</td>
+			<td>
+				<select name="country" class="form-control">
+					<option value="india">india</option>
+					<option value="usa">usa</option>
+					<option value="australia">australia</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			
+			<td colspan="2">
+				<input type="submit" value="Submit" class="btn btn-primary">
+			</td>
+		</tr>
+		</table>
+	</form>
+
+ </div>
+
+{% endblock %}
